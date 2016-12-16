@@ -2,7 +2,6 @@
 SET="$1"
 
 source ./config
-RESULTPSQL="psql -h $RESULTHOST -U $RESULTUSER -p $RESULTPORT -d $RESULTDB"
 
 if [ -z "$SET" ] ; then
   echo Usage:  $0 \"description\"

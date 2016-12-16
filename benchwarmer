@@ -92,8 +92,6 @@ if [ -n "$MAX_WORKERS" ] ; then
 fi
 
 # psql statements for the test database and the result database
-TESTPSQL="psql -h $TESTHOST -U $TESTUSER -p $TESTPORT -d $TESTDB"
-RESULTPSQL="psql -h $RESULTHOST -U $RESULTUSER -p $RESULTPORT -d $RESULTDB"
 echo Running tests using:  $TESTPSQL
 echo Storing results using:  $RESULTPSQL
 

@@ -68,3 +68,7 @@ SETRATES=""
 # Parameters for system monitoring code
 #
 DISKLIST="sda"
+
+TESTPSQL="psql -h $TESTHOST -U $TESTUSER -p $TESTPORT -d $TESTDB"
+RESULTPSQL="psql -h $RESULTHOST -U $RESULTUSER -p $RESULTPORT -d $RESULTDB"
+

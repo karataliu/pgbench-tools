@@ -19,7 +19,6 @@
 
 source ./config
 OUTFILE="results/index.htm"
-RESULTPSQL="psql -h $RESULTHOST -U $RESULTUSER -p $RESULTPORT -d $RESULTDB"
 
 # Emulate 'sed -i' behavior from GNU sed with standard sed instead.
 # Needed on platforms like Solaris.

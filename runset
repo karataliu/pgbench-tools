@@ -43,7 +43,7 @@ for SCALE in $SCALES; do
     $TESTPSQL -c "vacuum"
 
     echo Creating new pgbench tables
-    CMD=$PGBENCHBIN -i -s $SCALE -U $TESTUSER -p $TESTPORT $TESTDB
+    CMD="$PGBENCHBIN -i -s $SCALE -U $TESTUSER -p $TESTPORT $TESTDB"
     if [ ${#TESTHOST} -gt 0 ]; then
       CMD="$CMD -h $TESTHOST"
     fi

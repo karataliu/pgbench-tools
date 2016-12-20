@@ -219,6 +219,12 @@ fi
 cd results/$TEST
 echo Script $SCRIPT executing for $CLIENTS concurrent users... 1>&2
 
+echo 'WARMUP'
+CMD="$PGBENCHBIN -f $BASEDIR/$TESTDIR/$SCRIPT -s $SCALE -l -n -T 600 -P 60 -U $TESTUSER -p $TESTPORT -c $CLIENTS $WORKERS $RATEOPT $TESTDB"
+if [ ${#TESTHOST} -gt 0 ]; then
+  CMD="$CMD -h $TESTHOST"
+fi
+
 CMD="$PGBENCHBIN -f $BASEDIR/$TESTDIR/$SCRIPT -s $SCALE -l -n $TESTLEN -U $TESTUSER -p $TESTPORT -c $CLIENTS $WORKERS $RATEOPT $TESTDB"
 if [ ${#TESTHOST} -gt 0 ]; then
   CMD="$CMD -h $TESTHOST"
